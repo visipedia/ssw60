@@ -37,6 +37,7 @@ iNat2021
 
 ## Limitations and Notes for Future Improvements
 
+## Paper Citation
 
 ## Additional Bird Video Datasets
   * YouTube Birds
