@@ -35,7 +35,7 @@ iNat2021
 ## Best Results
 
 
-## Notes for Future Improvements
+## Limitations and Notes for Future Improvements
 
 
 ## Additional Bird Video Datasets
