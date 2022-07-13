@@ -115,6 +115,9 @@ The SSW60 dataset is relatively small, and therefore may not be appropriate for 
 ### Visual Bias
 The original intent of this dataset was to study fine-grained classification using audiovisual data ("How can we improve bird species classification if we have video + audio? What are the relative merits of each modality? For which species is a particular modality more useful for classification?" etc.). In a perfect world, each video would have relevant visual ***and*** acoustic information that can be analyzed by a model. However, the fact that we are using videos contributed by humans (i.e. someone decided to record a bird with a video camera as opposed to only a microphone) means that there is an inherent bias towards visual information in the SSW60 dataset. To put it plainly: while all videos have frames containing visuals of the bird species under question, not all videos have an audio channel, and even if they do, the audio may not be relevant for classification. We attempt to identify those videos with relevant acoustic information and use the column `reliable_audio` in the `video_ml.csv` file to track this. However, this column was machine generated and might not accuractely reflect the utility of the audio channel for each video. For our best results, we train and evaluate using the audio channel for all videos regardless of the value of `reliable_audio`.
 
+### Geographically Variable Media
+While all SSW60 species occur in Sapsucker Woods, not all media in SSW60 is recorded from Sapsucker Woods. This means that some training or testing media maybe more geographically diverse than is found in Sapsucker Woods. For example, some plumages might not be relevant to a bird's appearance in Sapsucker Woods, or some environments in the background of a piece of media might not resemble the woods (visually or aurally) of upstate New York. 
+
 ## Paper Citation
 If you find the code useful in your research, please consider citing:
 ```
