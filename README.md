@@ -122,7 +122,7 @@ While all SSW60 species occur in Sapsucker Woods, not all media in SSW60 was rec
 
 
 ## Paper Citation
-If you find the code useful in your research, please consider citing:
+If you use the SSW60 dataset in your research, please cite:
 ```
 @inproceedings{ssw602022eccv,
     author    = {Van Horn, Grant and Qian, Rui and and Wilber, Kimberly and Adam, Hartwig and Mac Aodha, Oisin and Belongie, Serge},
