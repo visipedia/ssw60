@@ -12,10 +12,9 @@
 ## Dataset Components
 
 ### Download Link
-This dataset was compiled solely for use of computer vision researchers. The media in the SSW60 dataset are not to be published or used for other projects. Please read the Terms of Use included with the dataset. The dataset can be downloaded [here [32GB].](https://ml-inat-competition-datasets.s3.amazonaws.com/ssw60/ssw60.tar.gz)
+This dataset was compiled solely for use of computer vision researchers. The media in the SSW60 dataset are not to be published or used for other projects. Please read the Terms of Use included with the dataset. The dataset can be downloaded [here [31.1GB].](https://ml-inat-competition-datasets.s3.amazonaws.com/ssw60/ssw60.tar.gz)
 
-Running `md5sum ssw60.tar.gz` should produce `af0a54ea1a897d130d91be8ffe0de81c  ssw60.tar.gz`. 
-The dataset is approximately 32GB untarred. 
+Running `md5sum ssw60.tar.gz` should produce `af0a54ea1a897d130d91be8ffe0de81c  ssw60.tar.gz`. The dataset is approximately 32GB untarred. 
 
 ### Taxa
 The SSW60 dataset covers 60 species of birds. Information for each species can be found in the `taxa.csv` file. We've provided label mapping between various datasets/taxonomies and the SSW60 dataset:
