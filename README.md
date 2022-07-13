@@ -9,6 +9,8 @@
 - [] GIF teaser figure
 - [] Live feeder cam link
 
+![Banner](assets/ssw60_teaser_1000px_12fps.gif)
+
 ## Dataset Components
 
 ### Download Link
