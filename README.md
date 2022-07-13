@@ -3,25 +3,29 @@
 ## TODO
 - [x] S3 dataset link
 - [x] Dataset descriptions
-- [] Training and evaluation descriptions
-- [] Best results
-- [] Archive paper link
-- [] GIF teaser figure
-- [] Live feeder cam link
+- [ ] Training and evaluation descriptions
+- [ ] Best results
+- [ ] Archive paper link
+- [x] GIF teaser figure
+- [ ] Live feeder cam link
 
-![Banner](assets/ssw60_teaser_800px_12fps_3x3.gif)
+![Banner](assets/ssw60_teaser_1000px_15fps_3x3.gif)
+
+We present a new benchmark dataset, Sapsucker Woods 60 (SSW60), for advancing research on audiovisual fine-grained categorization.
+The dataset covers 60 species of birds that all occur in a specific geographic location: [Sapsucker Woods, Ithaca, NY](https://goo.gl/maps/No8DykBCUWToGx2h9).
+It is comprised of images from existing datasets, and brand new, expert curated audio and video data.
 
 ## Dataset Components
 
 ### Download Link
-This dataset was compiled solely for use of computer vision researchers. The media in the SSW60 dataset are not to be published or used for other projects. Please read the Terms of Use included with the dataset. The dataset can be downloaded [here [31.1GB].](https://ml-inat-competition-datasets.s3.amazonaws.com/ssw60/ssw60.tar.gz)
+This dataset was compiled solely for use of computer vision researchers. The media in the SSW60 dataset are not to be redistributed or used for other non-research purposes. Please read the Terms of Use included with the dataset. The dataset can be downloaded [here [31.1GB].](https://ml-inat-competition-datasets.s3.amazonaws.com/ssw60/ssw60.tar.gz)
 
 Running `md5sum ssw60.tar.gz` should produce `af0a54ea1a897d130d91be8ffe0de81c  ssw60.tar.gz`. The dataset is approximately 32GB untarred. 
 
 ### Taxa
-The SSW60 dataset covers 60 species of birds that are all found in [Sapsucker Woods, Ithaca, NY](https://goo.gl/maps/No8DykBCUWToGx2h9). Information for each species can be found in the `taxa.csv` file. We've provided label mapping between various datasets/taxonomies and the SSW60 dataset:
-  * `species_code`: this can be used to relate the species to the [Clement's Checklist Taxonomy](https://www.birds.cornell.edu/clementschecklist/download/), which is used by eBird and the Macaulay Library. 
-  * `inat_taxon_id`: this can be used to relate the species to the [iNaturalist Taxonomy](https://www.inaturalist.org/pages/developers)
+Information for the 60 species can be found in the `taxa.csv` file. We've provided label mappings between various datasets/taxonomies and the SSW60 dataset:
+  * `species_code`: this can be used to relate the species to the [Clement's Checklist Taxonomy](https://www.birds.cornell.edu/clementschecklist/download/), which is used by [eBird](https://ebird.org) and the [Macaulay Library](https://www.macaulaylibrary.org/). 
+  * `inat_taxon_id`: this can be used to relate the species to the [iNaturalist Taxonomy](https://www.inaturalist.org/pages/developers); download link [here](https://www.inaturalist.org/taxa/inaturalist-taxonomy.dwca.zip).
   * `inat2021_label`: this can be used to relate the species to the [iNat2021 Competition dataset](https://github.com/visipedia/inat_comp/tree/master/2021). 
   * `nabirds_labels`: this can be used to relate the species to the (multiple) visual categories found in the [NABirds dataset](https://dl.allaboutbirds.org/nabirds). 
 
@@ -44,7 +48,7 @@ Example data from `video_ml.csv`:
 
 
 ### Audio
-3,861 wav files can be found in the `audio_ml/` directory. Split and meta data information can be found in the `audio_ml.csv` file. All audio files have 1 channel and have been converted to a sampling rate of 22050Hz. All audio files have a `.wav` extension. The file path for an audio recording should be constructed via `audio_ml/{asset_id}.mp4`.
+3,861 wav files can be found in the `audio_ml/` directory. Split and meta data information can be found in the `audio_ml.csv` file. All audio files have 1 channel and have been converted to a sampling rate of 22050Hz. All audio files have a `.wav` extension. The file path for an audio recording should be constructed via `audio_ml/{asset_id}.wav`.
 
 Example data from `audio_ml.csv`:
 |    |   asset_id |   label | split   |   samplerate |   channels |   samples |   duration_seconds |
