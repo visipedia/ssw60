@@ -109,6 +109,8 @@ We breifly describe the steps taken to achieve the best results on SSW60. Please
 
 
 ## Limitations
+We attempt to document some limitations of the SSW60 dataset. Our goal here is to be upfront with fellow researchers, and to provide targets for future versions of this dataset (or others) to improve upon. 
+
 ### Small Size 
 The SSW60 dataset is relatively small, and therefore may not be appropriate for training a model "from scratch." Using a pretrained model (perhaps pretrained on [ImageNet](https://www.image-net.org/) for visual information or [AudioSet](https://research.google.com/audioset/) for audio information) is an easy way to mitigate this limitation. 
 
@@ -116,7 +118,8 @@ The SSW60 dataset is relatively small, and therefore may not be appropriate for 
 The original intent of this dataset was to study fine-grained classification using audiovisual data ("How can we improve bird species classification if we have video + audio? What are the relative merits of each modality? For which species is a particular modality more useful for classification?" etc.). In a perfect world, each video would have relevant visual ***and*** acoustic information that can be analyzed by a model. However, the fact that we are using videos contributed by humans (i.e. someone decided to record a bird with a video camera as opposed to only a microphone) means that there is an inherent bias towards visual information in the SSW60 dataset. To put it plainly: while all videos have frames containing visuals of the bird species under question, not all videos have an audio channel, and even if they do, the audio may not be relevant for classification. We attempt to identify those videos with relevant acoustic information and use the column `reliable_audio` in the `video_ml.csv` file to track this. However, this column was machine generated and might not accuractely reflect the utility of the audio channel for each video. For our best results, we train and evaluate using the audio channel for all videos regardless of the value of `reliable_audio`.
 
 ### Geographically Variable Media
-While all SSW60 species occur in Sapsucker Woods, not all media in SSW60 is recorded from Sapsucker Woods. This means that some training or testing media maybe more geographically diverse than is found in Sapsucker Woods. For example, some plumages might not be relevant to a bird's appearance in Sapsucker Woods, or some environments in the background of a piece of media might not resemble the woods (visually or aurally) of upstate New York. 
+While all SSW60 species occur in Sapsucker Woods, not all media in SSW60 was recorded from Sapsucker Woods. This means that some training or testing media maybe more geographically diverse than is found in Sapsucker Woods. For example, some plumages might not be relevant to a bird's appearance in Sapsucker Woods, or some environments in the background of a piece of media might not resemble the woods (visually or aurally) of upstate New York. 
+
 
 ## Paper Citation
 If you find the code useful in your research, please consider citing:
@@ -129,7 +132,9 @@ If you find the code useful in your research, please consider citing:
 }
 ```
 
+
 ## Additional Bird Video Datasets
+We are certainly not the first to build a dataset around videos focused on bird species. However, we did not find that the existing datasets meant our research needs. Please see the paper for more details and comparisions. 
   * [YouTube Birds](https://www.cs.umd.edu/~chenzhu/fgvc/)
   * [VB100](http://arma.sourceforge.net/vb100/)
   * [IBC127](https://www.mi.t.u-tokyo.ac.jp/projects/IBC127)
