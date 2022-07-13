@@ -37,7 +37,7 @@ Example data from `taxa.csv`:
 |  2 |       2 | mallar3        |            6930 |             3201 | 102 317 616      | Mallard       | Anas platyrhynchos | Anatidae (Ducks, Geese, and Waterfowl) | Anseriformes |
 
 ### Videos
-5,400 mp4 files can be found in the `video_ml/` directory. Split and meta data information can be found in the `video_ml.csv` file. All video files have been converted to 25 frames per second, and all have the `.mp4` file extension. The file path for a video should be constructed via `video_ml/{asset_id}.mp4`.
+5,400 mp4 video files can be found in the `video_ml/` directory. Split and meta data information can be found in the `video_ml.csv` file. All video files have been converted to 25 frames per second, and all have the `.mp4` file extension. The file path for a video should be constructed via `video_ml/{asset_id}.mp4`.
 
 Example data from `video_ml.csv`:
 |    |   asset_id |   label | split   |   fps |   frame_count |   duration_seconds |   frame_height |   frame_width |   frame_channels |   orginal_video_start_second |   original_video_end_second |   original_video_target_second |   target_second |   reliable_audio |
@@ -48,7 +48,7 @@ Example data from `video_ml.csv`:
 
 
 ### Audio
-3,861 wav files can be found in the `audio_ml/` directory. Split and meta data information can be found in the `audio_ml.csv` file. All audio files have 1 channel and have been converted to a sampling rate of 22050Hz. All audio files have a `.wav` extension. The file path for an audio recording should be constructed via `audio_ml/{asset_id}.wav`.
+3,861 wav audio files can be found in the `audio_ml/` directory. Split and meta data information can be found in the `audio_ml.csv` file. All audio files have 1 channel and have been converted to a sampling rate of 22050Hz. All audio files have a `.wav` extension. The file path for an audio recording should be constructed via `audio_ml/{asset_id}.wav`.
 
 Example data from `audio_ml.csv`:
 |    |   asset_id |   label | split   |   samplerate |   channels |   samples |   duration_seconds |
