@@ -1,6 +1,10 @@
 # Sapsucker Woods 60 Audiovisual Dataset
 
 ## TODO
+- [x] S3 dataset link
+- [x] Dataset descriptions
+- [] Training and evaluation descriptions
+- [] Best results
 - [] Archive paper link
 - [] GIF teaser figure
 - [] Live feeder cam link
