@@ -100,11 +100,10 @@ The overall accuracy score for an algorithm is the average accuracy over all $N$
 We do not enforce a specific audiovisual classification model or training procedure. This is a fast moving research area with new ideas and datasets coming quickly. We expect researchers to be clear and forthright in describing all data (inlcuding "pretaining data" and "pretrained backbones") they used for training their models and the steps taken to produce their final audiovisual classification network. Researchers may find it useful to pretrain their models using the accompanying audio (`audio_ml.csv`) and image datasets (`images_nabirds.csv`, `images_inat.csv`). If this is done, we expect the `train/test` splits for those datasets to be respected. We discourage merging the `train` and `test` splits to build a larger training corpus. 
 
 ## Best Results
-We breifly describe the steps taken to achieve the best results on SSW60. Please see the accompanying paper for details and specifics. 
-  1. Pretrain image classifier using the `images_nabirds` and `images_inat` datasets.
+We breifly describe the steps taken to achieve the best results on SSW60, which is `80.6%`  in Table 5 . Please see the accompanying paper for details and specifics. 
+  1. Pretrain image classifier using the  `images_inat` dataset.
   2. Pretrain the audio classifier using the `audio_ml` dataset. 
-  3. Fine-tune the visual classificier on the training videos.
-  4. Fine-tune the audio classifier on the training videos.
+  3. Fine-tune the audio classifier on the training videos.
   5. Use score fusion to combine the predictions of the audio and video classifiers on the video test set.
 
 
