@@ -93,7 +93,7 @@ s_v =
 
 The overall accuracy score for an algorithm is the average accuracy over all $N$ test videos:
 ```math
-\text{accuracy} = \frac{1}{N} \sum_{i} s_{v}
+\text{accuracy} = \frac{1}{N} \sum_{v} s_{v}
 ```
 
 ## Training Procedure 
@@ -109,7 +109,11 @@ We breifly describe the steps taken to achieve the best results on SSW60. Please
 
 
 ## Limitations
+### Small Size 
+The SSW60 dataset is relatively small, and therefore may not be appropriate for training a model "from scratch." Using a pretrained model (perhaps pretrained on [ImageNet](https://www.image-net.org/) for visual information or [AudioSet](https://research.google.com/audioset/) for audio information) is an easy way to mitigate this limitation. 
 
+### Visual Bias
+The original intent of this dataset was to study fine-grained classification using audiovisual data ("How can we improve bird species classification if we have video + audio? What are the relative merits of each modality? For which species is a particular modality more useful for classification?" etc.). In a perfect world, each video would have relevant visual ***and*** acoustic information that can be analyzed by a model. However, the fact that we are using videos contributed by humans (i.e. someone decided to record a bird with a video camera as opposed to only a microphone) means that there is an inherent bias towards visual information in the SSW60 dataset. To put it plainly: while all videos have frames containing visuals of the bird species under question, not all videos have an audio channel, and even if they do, the audio may not be relevant for classification. We attempt to identify those videos with relevant acoustic information and use the column `reliable_audio` in the `video_ml.csv` file to track this. However, this column was machine generated and might not accuractely reflect the utility of the audio channel for each video. For our best results, we train and evaluate using all audio channels regardless of the value of `reliable_audio`.
 
 ## Paper Citation
 If you find the code useful in your research, please consider citing:
