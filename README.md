@@ -17,7 +17,7 @@ This dataset was compiled solely for use of computer vision researchers. The med
 Running `md5sum ssw60.tar.gz` should produce `af0a54ea1a897d130d91be8ffe0de81c  ssw60.tar.gz`. The dataset is approximately 32GB untarred. 
 
 ### Taxa
-The SSW60 dataset covers 60 species of birds. Information for each species can be found in the `taxa.csv` file. We've provided label mapping between various datasets/taxonomies and the SSW60 dataset:
+The SSW60 dataset covers 60 species of birds that are all found in [Sapsucker Woods, Ithaca, NY](https://goo.gl/maps/No8DykBCUWToGx2h9). Information for each species can be found in the `taxa.csv` file. We've provided label mapping between various datasets/taxonomies and the SSW60 dataset:
   * `species_code`: this can be used to relate the species to the [Clement's Checklist Taxonomy](https://www.birds.cornell.edu/clementschecklist/download/), which is used by eBird and the Macaulay Library. 
   * `inat_taxon_id`: this can be used to relate the species to the [iNaturalist Taxonomy](https://www.inaturalist.org/pages/developers)
   * `inat2021_label`: this can be used to relate the species to the [iNat2021 Competition dataset](https://github.com/visipedia/inat_comp/tree/master/2021). 
