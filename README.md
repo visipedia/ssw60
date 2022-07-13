@@ -13,7 +13,7 @@
 
 We present a new benchmark dataset, Sapsucker Woods 60 (SSW60), for advancing research on audiovisual fine-grained categorization.
 The dataset covers 60 species of birds that all occur in a specific geographic location: [Sapsucker Woods, Ithaca, NY](https://goo.gl/maps/No8DykBCUWToGx2h9).
-It is comprised of images from existing datasets, and brand new, expert curated audio and video data. These species have a high probability of being seen or heard on the [live FeederWatch Cam](https://www.youtube.com/watch?v=N609loYkFJo&ab_channel=CornellLabBirdCams) hosted at the [Cornell Lab of Ornithology](https://www.birds.cornell.edu/). The entire dataset is packaged up into one convenient tar file, see below for the download link. For questions, clarifications, or issues, please open an Issue on this repository. 
+It is comprised of images from existing datasets, and brand new, expert curated audio and video data. These species have a high probability of being seen or heard on the [live FeederWatch Cam](https://www.youtube.com/watch?v=N609loYkFJo&ab_channel=CornellLabBirdCams) hosted at the [Cornell Lab of Ornithology](https://www.birds.cornell.edu/). The entire dataset is packaged up into one convenient tar file, see below for the download link. For questions, clarifications, or problems, please open an Issue on this repository. 
 
 ## Dataset Components
 
