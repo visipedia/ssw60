@@ -7,7 +7,7 @@
 - [ ] Best results
 - [ ] Archive paper link
 - [x] GIF teaser figure
-- [ ] Live feeder cam link
+- [x] Live feeder cam link
 
 ![Banner](assets/ssw60_teaser_1000px_15fps_3x3.gif)
 
