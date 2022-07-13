@@ -22,7 +22,7 @@ This dataset was compiled solely for use of computer vision researchers. The med
 
 Running `md5sum ssw60.tar.gz` should produce `af0a54ea1a897d130d91be8ffe0de81c  ssw60.tar.gz`. The dataset is approximately 32GB untarred. 
 
-### Taxa
+### Species Information
 Information for the 60 species can be found in the `taxa.csv` file. We've provided label mappings between various datasets/taxonomies and the SSW60 dataset:
   * `species_code`: this can be used to relate the species to the [Clement's Checklist Taxonomy](https://www.birds.cornell.edu/clementschecklist/download/), which is used by [eBird](https://ebird.org) and the [Macaulay Library](https://www.macaulaylibrary.org/). 
   * `inat_taxon_id`: this can be used to relate the species to the [iNaturalist Taxonomy](https://www.inaturalist.org/pages/developers); download link [here](https://www.inaturalist.org/taxa/inaturalist-taxonomy.dwca.zip).
