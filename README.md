@@ -60,7 +60,7 @@ Example data from `audio_ml.csv`:
 
 ### Images
 #### NABirds
-10,221 image files from the [NABirds dataset](https://dl.allaboutbirds.org/nabirds) can be found in the `images_nabirds/` directory. Split and meta data information can be found in the `images_nabirds.csv` file. All image files have a `.jpg` extension. The file path for an NABirds image should be constructed via `images_nabirds/{asset_id}.jpg`.
+10,221 image files from the [NABirds dataset](https://dl.allaboutbirds.org/nabirds) can be found in the `images_nabirds/` directory. Split and meta data information can be found in the `images_nabirds.csv` file. All image files have a `.jpg` extension. The file path for an NABirds image should be constructed via `images_nabirds/{asset_id}.jpg`. Additional annotations for these images (bounding boxes and keypoints) can be obtained by downloading the [NABirds dataset](https://dl.allaboutbirds.org/nabirds). 
 
 Example data from `images_nabirds.csv`:
 |    | asset_id                         |   label | split   |   height |   width |   channels | photographer   |
