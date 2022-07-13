@@ -81,15 +81,35 @@ Example data from `images_inat.csv`:
 |  2 |      76751 |      56 | train   |      375 |     500 |          3 | Aaron Lincoln   |            1 |
 
 
-## Training Procedure 
-
-
 ## Evaluation Procedure
+We use top-1 classification accuracy on the ***video files*** as the primary evaluation metric for SSW60. Please use the `split` column in the `video_ml.csv` to identify the video files that are marked for `test`. The distribution of the test videos is nearly uniform, so we use a simple form of top-1 accuracy: for each video $v$, an algorithm will produce one label $l_v$ and you should compare this label to the ground truth label for the video $g_v$, computing the accuracy score as: 
+```math 
+s_v = 
+\begin{cases}
+1 & \quad \text{if } l_v = g_v \\
+0 & \quad \text{otherwise}
+\end{cases}
+```
+
+The overall accuracy score for an algorithm is the average accuracy over all $N$ test videos:
+```math
+\text{accuracy} = \frac{1}{N} \sum_{i} s_{v}
+```
+
+## Training Procedure 
+We do not enforce a specific audiovisual classification model or training procedure. This is a fast moving research area with new ideas and datasets coming quickly. We expect researchers to be clear and forthright in describing all data (inlcuding "pretaining data" and "pretrained backbones") they used for training their models and the steps taken to produce their final audiovisual classification network. Researchers may find it useful to pretrain their models using the accompanying audio (`audio_ml.csv`) and image datasets (`images_nabirds.csv`, `images_inat.csv`). If this is done, we expect the `train/test` splits for those datasets to be respected. We discourage merging the `train` and `test` splits to build a larger training corpus. 
 
 ## Best Results
+We breifly describe the steps taken to achieve the best results SSW60. Please see the accompanying paper for details and specifics. 
+  1. Pretrain image classifier using the `images_nabirds` and `images_inat` datasets.
+  2. Pretrain the audio classifier using the `audio_ml` dataset. 
+  3. Fine-tune the visual classificier on the training videos.
+  4. Fine-tune the audio classifier on the training videos.
+  5. Use score fusion to combine the predictions of the audio and video classifiers on the video test set.
 
 
 ## Limitations
+
 
 ## Paper Citation
 If you find the code useful in your research, please consider citing:
