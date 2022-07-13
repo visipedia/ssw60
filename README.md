@@ -134,7 +134,7 @@ If you find the code useful in your research, please consider citing:
 
 
 ## Additional Bird Video Datasets
-We are certainly not the first to build a dataset around videos focused on bird species. However, we did not find that the existing datasets meant our research needs. Please see the paper for more details and comparisions. 
+We are certainly not the first to build a dataset around videos focused on bird species. However, we did not find that the existing datasets met our research needs. Please see the paper for more details and comparisions. 
   * [YouTube Birds](https://www.cs.umd.edu/~chenzhu/fgvc/)
   * [VB100](http://arma.sourceforge.net/vb100/)
   * [IBC127](https://www.mi.t.u-tokyo.ac.jp/projects/IBC127)
