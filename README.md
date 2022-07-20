@@ -7,7 +7,8 @@ The dataset covers 60 species of birds that all occur in a specific geographic l
 It is comprised of images from existing datasets, and brand new, expert curated audio and video data. These species have a high probability of being seen or heard on the [live FeederWatch Cam](https://www.youtube.com/watch?v=N609loYkFJo&ab_channel=CornellLabBirdCams) hosted at the [Cornell Lab of Ornithology](https://www.birds.cornell.edu/). The entire dataset is packaged up into one convenient tar file, see below for the download link. For questions, clarifications, or problems, please open an Issue on this repository. 
 
 ## TODO
-- [ ] Archive paper link
+- [ ] Arxiv paper link
+- [ ] Sample code
 
 ## Dataset Components
 
@@ -91,10 +92,10 @@ The overall accuracy score for an algorithm is the average accuracy over all $N$
 ```
 
 ## Training Procedure 
-We do not enforce a specific audiovisual classification model or training procedure. This is a fast moving research area with new ideas and datasets coming quickly. We expect researchers to be clear and forthright in describing all data (inlcuding "pretaining data" and "pretrained backbones") they used for training their models and the steps taken to produce their final audiovisual classification network. Researchers may find it useful to pretrain their models using the accompanying audio (`audio_ml.csv`) and image datasets (`images_nabirds.csv`, `images_inat.csv`). If this is done, we expect the `train/test` splits for those datasets to be respected. We discourage merging the `train` and `test` splits to build a larger training corpus. 
+We do not enforce a specific audiovisual classification model or training procedure. This is a fast moving research area with new ideas and datasets coming quickly. We expect researchers to be clear and forthright in describing all data (inlcuding "pretaining data" and "pretrained backbones") they used for training their models and the steps taken to produce their final audiovisual classification network. Researchers may find it useful to pretrain their models using the accompanying audio (`audio_ml.csv`) and image datasets (`images_nabirds.csv`, `images_inat.csv`). If this is done, we expect the `train/test` splits for those datasets to be respected, i.e we discourage using the test splits for training. 
 
 ## Best Results
-We breifly describe the steps taken in our EECV 2022 paper to achieve the best results on SSW60. Please see the accompanying paper for details and specifics. We train two [ViT-B models](https://arxiv.org/abs/2010.11929), one to process audio, and one to process images. We then combine these models through score fusion. The steps taken: 
+We breifly describe the steps taken in our EECV 2022 paper to achieve the best results on SSW60. Please see the accompanying paper for details and specifics. We train two ImageNet pretrained [ViT-B models](https://arxiv.org/abs/2010.11929), one to process audio, and one to process images. We then combine these models through score fusion. The steps taken: 
   1. Pretrain the image classifier using the  `images_inat` dataset.
   2. Pretrain the audio classifier using the `audio_ml` dataset. 
   3. Fine-tune the audio classifier on the training videos.
@@ -129,7 +130,7 @@ If you use the SSW60 dataset in your research, please cite:
 The first two authors contributed equally to this work. 
 
 ## Additional Bird Video Datasets
-We are certainly not the first to build a video dataset focused on bird species. However, we did not find that the existing datasets met our research needs. Please see the paper, particularly the supplementary material, for more details and comparisions. 
+We are certainly not the first to build a video dataset focused on bird species. Please see the paper, particularly the supplementary material, for more details and comparisions. 
   * [YouTube Birds](https://www.cs.umd.edu/~chenzhu/fgvc/)
   * [VB100](http://arma.sourceforge.net/vb100/)
   * [IBC127](https://www.mi.t.u-tokyo.ac.jp/projects/IBC127)
