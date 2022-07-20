@@ -1,19 +1,13 @@
-# Sapsucker Woods 60 Audiovisual Dataset
-
-## TODO
-- [x] S3 dataset link
-- [x] Dataset descriptions
-- [ ] Training and evaluation descriptions
-- [ ] Best results
-- [ ] Archive paper link
-- [x] GIF teaser figure
-- [x] Live feeder cam link
-
 ![Banner](assets/ssw60_teaser_1000px_15fps_3x3.gif)
+
+# Sapsucker Woods 60 Audiovisual Dataset
 
 We present a new benchmark dataset, Sapsucker Woods 60 (SSW60), for advancing research on audiovisual fine-grained categorization.
 The dataset covers 60 species of birds that all occur in a specific geographic location: [Sapsucker Woods, Ithaca, NY](https://goo.gl/maps/No8DykBCUWToGx2h9).
 It is comprised of images from existing datasets, and brand new, expert curated audio and video data. These species have a high probability of being seen or heard on the [live FeederWatch Cam](https://www.youtube.com/watch?v=N609loYkFJo&ab_channel=CornellLabBirdCams) hosted at the [Cornell Lab of Ornithology](https://www.birds.cornell.edu/). The entire dataset is packaged up into one convenient tar file, see below for the download link. For questions, clarifications, or problems, please open an Issue on this repository. 
+
+## TODO
+- [ ] Archive paper link
 
 ## Dataset Components
 
@@ -100,11 +94,13 @@ The overall accuracy score for an algorithm is the average accuracy over all $N$
 We do not enforce a specific audiovisual classification model or training procedure. This is a fast moving research area with new ideas and datasets coming quickly. We expect researchers to be clear and forthright in describing all data (inlcuding "pretaining data" and "pretrained backbones") they used for training their models and the steps taken to produce their final audiovisual classification network. Researchers may find it useful to pretrain their models using the accompanying audio (`audio_ml.csv`) and image datasets (`images_nabirds.csv`, `images_inat.csv`). If this is done, we expect the `train/test` splits for those datasets to be respected. We discourage merging the `train` and `test` splits to build a larger training corpus. 
 
 ## Best Results
-We breifly describe the steps taken to achieve the best results on SSW60, which is `80.6%`  in Table 5 . Please see the accompanying paper for details and specifics. 
-  1. Pretrain image classifier using the  `images_inat` dataset.
+We breifly describe the steps taken in our EECV 2022 paper to achieve the best results on SSW60. Please see the accompanying paper for details and specifics. We train two [ViT-B models](https://arxiv.org/abs/2010.11929), one to process audio, and one to process images. We then combine these models through score fusion. The steps taken: 
+  1. Pretrain the image classifier using the  `images_inat` dataset.
   2. Pretrain the audio classifier using the `audio_ml` dataset. 
   3. Fine-tune the audio classifier on the training videos.
   5. Use score fusion to combine the predictions of the audio and video classifiers on the video test set.
+
+This method achieves `80.6%` top-1 accuracy on the SSW60 video test set. Note that this process did ***not*** fine-tune the image classifier on the video frames of the SSW60 video train set. 
 
 
 ## Limitations
@@ -130,10 +126,10 @@ If you use the SSW60 dataset in your research, please cite:
     year      = {2022}
 }
 ```
-
+The first two authors contributed equally to this work. 
 
 ## Additional Bird Video Datasets
-We are certainly not the first to build a dataset around videos focused on bird species. However, we did not find that the existing datasets met our research needs. Please see the paper for more details and comparisions. 
+We are certainly not the first to build a video dataset focused on bird species. However, we did not find that the existing datasets met our research needs. Please see the paper, particularly the supplementary material, for more details and comparisions. 
   * [YouTube Birds](https://www.cs.umd.edu/~chenzhu/fgvc/)
   * [VB100](http://arma.sourceforge.net/vb100/)
   * [IBC127](https://www.mi.t.u-tokyo.ac.jp/projects/IBC127)
