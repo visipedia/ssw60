@@ -78,18 +78,20 @@ Example data from `images_inat.csv`:
 
 ## Evaluation Procedure
 We use top-1 classification accuracy on the ***video files*** as the primary evaluation metric for SSW60. Please use the `split` column in the `video_ml.csv` to identify the video files that are marked for `test`. The distribution of the test videos is nearly uniform, so we use a simple form of top-1 accuracy: for each video $v$, an algorithm will produce one label $l_v$ and you should compare this label to the ground truth label for the video $g_v$, computing the accuracy score as: 
-```math 
+
+$$ 
 s_v = 
 \begin{cases}
 1 & \quad \text{if } l_v = g_v \\
 0 & \quad \text{otherwise}
 \end{cases}
-```
+$$
 
 The overall accuracy score for an algorithm is the average accuracy over all $N$ test videos:
-```math
+
+$$
 \text{accuracy} = \frac{1}{N} \sum_{v} s_{v}
-```
+$$
 
 ## Training Procedure 
 We do not enforce a specific audiovisual classification model or training procedure. This is a fast moving research area with new ideas and datasets coming quickly. We expect researchers to be clear and forthright in describing all data (inlcuding "pretaining data" and "pretrained backbones") they used for training their models and the steps taken to produce their final audiovisual classification network. Researchers may find it useful to pretrain their models using the accompanying audio (`audio_ml.csv`) and image datasets (`images_nabirds.csv`, `images_inat.csv`). If this is done, we expect the `train/test` splits for those datasets to be respected, i.e we discourage using the test splits for training. 
