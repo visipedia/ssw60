@@ -124,7 +124,7 @@ While all SSW60 species occur in Sapsucker Woods, not all media in SSW60 was rec
 If you use the SSW60 dataset in your research, please cite:
 ```
 @inproceedings{ssw602022eccv,
-    author    = {Van Horn, Grant and Qian, Rui and and Wilber, Kimberly and Adam, Hartwig and Mac Aodha, Oisin and Belongie, Serge},
+    author    = {Van Horn, Grant and Qian, Rui and Wilber, Kimberly and Adam, Hartwig and Mac Aodha, Oisin and Belongie, Serge},
     title     = {Exploring Fine-grained Audiovisual Categorization with the SSW60 Dataset},
     booktitle = {European Conference on Computer Vision (ECCV)},
     year      = {2022}
